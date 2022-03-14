@@ -5,4 +5,4 @@ if [[ -z "$1" ]]; then
 fi
 
 docker exec -it kafka \
-kafka-topics --zookeeper zookeeper:2181 --topic $1 --describe
+kafka-topics --bootstrap-server localhost:9092 --topic $1 --describe
