@@ -5,4 +5,4 @@ if [[ -z "$1" ]]; then
 fi
 
 docker exec -it kafka \
-kafka-topics --create --zookeeper zookeeper:2181 --replication-factor 1 --partitions 1 --if-not-exists --topic $1
+kafka-topics --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --if-not-exists --topic $1
